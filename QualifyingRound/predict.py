@@ -19,14 +19,12 @@ warnings.filterwarnings(action='ignore')
 
 def predict(model,flow_dataset,load_checkpoint_folder) :
     """
-    모델 평가를 위한 함수
-    - 5KFOLD로 학습한 후, accuracy의 평균을 출력
+    모델을 이용하여 예측하기 위한 함수
     ---input---
     model : 불러올 모델의 개형 : countinue.py에서 정의한 create_model()을 불러와 모델의 개형을 정의한 후, 넣어줌
     flow_dataset : 이미지 데이터 경로와 target으로 이루어진 데이터셋(dir,target)
     load_checkpoint_folder : 모델을 불러올 경로(끝에 /를 붙인다)
     ---output---
-    print : accuracy
     return : predict한 결과
     """
     # Load images using Keras ImageDataGenerator
