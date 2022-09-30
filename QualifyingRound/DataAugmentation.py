@@ -14,12 +14,15 @@ import os
 
 # Make Directiory dataframe
 
-def directory_dataframe(data_directory) :
+def directory_dataframe(data_directory,env) :
     """
     이미지의 경로를 저장하는 데이터 프레임을 만드는 함수
     ---
     data_directory : class 별로 각각의 폴더에 담긴 이미지가 있는 폴더 경로
                      ('/경로1/경로2/~~~')로 입력해야하며, 마지막에는 / 을 붙이지 않는다.
+    env : 환경을 의미 
+    - "local" : 로컬
+    - "colab" : 코랩
     ---
     output
     df : 이미지 경로를 저장한 데이터 프레임
@@ -28,7 +31,10 @@ def directory_dataframe(data_directory) :
     """
     food_name = []
     for i in glob(data_directory + "/*") :
-        food_name.append(i.replace(data_directory + "\\",""))
+        if env == "local" :
+            food_name.append(i.replace(data_directory + "\\",""))
+        else :
+            food_name.append(i.replace(data_directory + "/",""))
 
     dir_list = []
     target = []
