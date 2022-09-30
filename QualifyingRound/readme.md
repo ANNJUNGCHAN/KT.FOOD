@@ -33,7 +33,8 @@
 ![슬라이드10](https://user-images.githubusercontent.com/89781598/193321098-da30f5ab-d47e-42e1-aa1b-c48400ddc59f.JPG)
 ![슬라이드11](https://user-images.githubusercontent.com/89781598/193321102-eead7132-badc-41c6-921a-405e60c80ac6.JPG)
 
-### 
+### 결론
+
 ![슬라이드12](https://user-images.githubusercontent.com/89781598/193321105-1b8b2be4-0780-4829-93b3-f5172ce87648.JPG)
 
 ### 새로운 이미지 예측하기!
