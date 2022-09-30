@@ -1,4 +1,5 @@
 # 본선 모델
+![슬라이드1](https://user-images.githubusercontent.com/89781598/193316520-6f2a9a46-5e8d-46c2-89eb-665d031b9edf.JPG)
 
 ### 들어가기 전에
 - 본선에서는 KT에서 제공하는 NGC Pytorch Docker 기반 KT genie Mars 개발환경에서 진행하였습니다.
@@ -24,6 +25,7 @@
     - model_1e-7_ep20.py : 이어서 모델을 학습하기 위한 코드(model_1e-4.py로 학습했던 모델을 과적합 방지를 위해 learning rate 1e-7로 재학습시켰습니다.)
 
 ### 데이터
+![슬라이드3](https://user-images.githubusercontent.com/89781598/193317912-cc0b1b1b-bfb8-4824-afd1-ba17e1530553.JPG)
 ```
 - 원래 데이터 200장
 - Background Remove 200장
@@ -98,6 +100,21 @@ Estimated Total Size (MB): 875.87
 ----------------------------------------------------------------
 
 ```
+### 데이터 전처리
+#### BR : Background Remover 
+![슬라이드4](https://user-images.githubusercontent.com/89781598/193316753-d74ab4c7-aebd-40c0-8c19-730624397254.JPG)
+#### OCM : One class Cut Mix
+![슬라이드5](https://user-images.githubusercontent.com/89781598/193316856-2280428a-0154-423d-81a7-f801c61b666b.JPG)
+#### Data Transforms
+![슬라이드6](https://user-images.githubusercontent.com/89781598/193316924-1b5ac8af-35be-4ee1-b8a2-0e7310573b71.JPG)
+
+### 모델링
+#### VGG-13 is most efficient model
+![슬라이드7](https://user-images.githubusercontent.com/89781598/193317774-92f9ce62-b98b-4511-8946-8033a81d262b.JPG)
+#### Vison Transformer vs VGG-13
+![슬라이드8](https://user-images.githubusercontent.com/89781598/193317818-674f37d9-9f25-4887-ad86-9df167ea08c7.JPG)
+#### Scheduled Learning Rate
+![슬라이드9](https://user-images.githubusercontent.com/89781598/193317859-b4ca6c66-bbc2-4b81-9900-c7bfbf7d1077.JPG)
 
 ### 결과
 - 최종 Test 데이터에 대한 스코어는 KT에서 평가하며, 참가자는 알 수 없습니다.
