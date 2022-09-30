@@ -5,7 +5,34 @@
 ![슬라이드2](https://user-images.githubusercontent.com/89781598/193318547-f69aa137-2fce-484f-8915-3e179ba53972.JPG)
 
 ### 파일 경로
+```
+📦QualifyingRound
+ ┣ 📜continue_train.py
+ ┣ 📜DataAugmentation.py
+ ┣ 📜predict.py
+ ┣ 📜train.py
+ ┗ 📜__init__.py
+```
+### 파일
+- QualifyRound : 예선에서 사용했던 코드들이 담겨져 있습니다.
+    - continue_train.py : train.py를 이어서 학습하기 위한 코드
+    - DataAugmentation.py : Background Remove를 통해 이미지의 배경을 지워주기 위한 코드와 경로와 Target에 대한 정보를 가지고 있는 데이터 프레임을 생성하는 함수
+    - predict.py : 학습된 모델에서 예측을 하기 위한 코드
+    - train.py : 모델을 학습시키기 위한 코드
+    
+### Remove Background
+![슬라이드3](https://user-images.githubusercontent.com/89781598/193321049-9e9f4db0-1c29-410b-992e-dedfa53e4f28.JPG)
 
+### 모델 설명
+![슬라이드4](https://user-images.githubusercontent.com/89781598/193321084-504d4e7d-97d5-4a22-adec-e7a47a5330ea.JPG)
+![슬라이드5](https://user-images.githubusercontent.com/89781598/193321089-ab63417b-a710-44c6-a50d-16cbcbb9d1c6.JPG)
+![슬라이드6](https://user-images.githubusercontent.com/89781598/193321092-89360dde-1766-4e59-b3d9-5cdde9373cc3.JPG)
+![슬라이드7](https://user-images.githubusercontent.com/89781598/193321094-eb510c72-a16d-47ea-adb2-b878cb3ab18a.JPG)
+![슬라이드8](https://user-images.githubusercontent.com/89781598/193321095-5955f973-6159-4f8a-9251-a2d29aa5198c.JPG)
+![슬라이드9](https://user-images.githubusercontent.com/89781598/193321096-8bf95ab5-b213-48fd-b7af-f49a5b11df86.JPG)
+![슬라이드10](https://user-images.githubusercontent.com/89781598/193321098-da30f5ab-d47e-42e1-aa1b-c48400ddc59f.JPG)
+![슬라이드11](https://user-images.githubusercontent.com/89781598/193321102-eead7132-badc-41c6-921a-405e60c80ac6.JPG)
+![슬라이드12](https://user-images.githubusercontent.com/89781598/193321105-1b8b2be4-0780-4829-93b3-f5172ce87648.JPG)
 
 ### 새로운 이미지 예측하기!
 #### 들어가기
