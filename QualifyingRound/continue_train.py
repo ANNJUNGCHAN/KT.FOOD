@@ -43,10 +43,10 @@ def create_model() :
 
     flat = keras.layers.Flatten()(maxpool2)
 
-    dense1 = keras.layers.Dense(512, activation = 'swish')(flat)
+    dense1 = keras.layers.Dense(1024, activation = 'swish')(flat)
     dropout1 = keras.layers.Dropout(0.3)(dense1)
 
-    dense2 = keras.layers.Dense(256,activation = 'swish')(dropout1)
+    dense2 = keras.layers.Dense(512,activation = 'swish')(dropout1)
     dropout2 = keras.layers.Dropout(0.3)(dense2)
     dense4 = keras.layers.Dense(50, activation = "softmax")(dropout2)
 
