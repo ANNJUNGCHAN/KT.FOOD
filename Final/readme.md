@@ -4,6 +4,39 @@
 - 본선에서는 KT에서 제공하는 NGC Pytorch Docker 기반 KT genie Mars 개발환경에서 진행하였습니다.
 - 해당 개발 환경에 데이터와 모델을 저장한 파일이 있었지만, 대회 규정상 이를 다운로드하는 행위는 금지되었기 때문에, 현재 깃허브에는 개발에 사용했던 소스코드만 존재합니다.
 
+### 파일 구조
+
+```
+📦Final
+ ┣ 📜check_score.py
+ ┣ 📜make_cutmix.py
+ ┣ 📜make_remove_background.py
+ ┣ 📜model_1e-4.py
+ ┗ 📜model_1e-7_ep20.py
+```
+
+### 파일
+- Final : 본선에서 사용했던 코드들이 담겨져 있습니다.
+    - check_score.py : 최종 모델의 스코어를 체크하기 위한 코드
+    - make_cutmix.py : One class Cut Mix 이미지를 생성하기 위한 코드(OCM)
+    - make_remove_background.py : Background Removed 이미지를 생성하기 위한 코드(BR)
+    - model_1e-4.py : 최초 모델 학습을 위한 코드(learning rate 1e-4로 최초 학습을 진행하였습니다.)
+    - model_1e-7_ep20.py : 이어서 모델을 학습하기 위한 코드(model_1e-4.py로 학습했던 모델을 과적합 방지를 위해 learning rate 1e-7로 재학습시켰습니다.)
+
+### 데이터
+```
+- 원래 데이터 200장
+- Background Remove 200장
+- CutMix 500장
+```
+
+### 학습 방법
+```
+- 1. learning rate 1e-4로 우선적으로 학습
+     - train val과 valid val의 간격이 급격하게 벌어진다면, 이 지점의 체크포인트를 저장한다.
+- 2. 에서의 체크포인트부터 learning rate 1e-7로 학습하여 최대한 train val과 valid val의 간격이 벌어지지 않게 만든다.
+```
+
 ### 모델 개형
 - VGG-13 모델의 개형을 사용하였습니다.
 ```
@@ -65,4 +98,10 @@ Estimated Total Size (MB): 875.87
 ----------------------------------------------------------------
 
 ```
-### 
+
+### 결과
+- 최종 Test 데이터에 대한 스코어는 KT에서 평가하며, 참가자는 알 수 없습니다.
+
+```
+Validation Top1 Accuracy : 84.15%
+```
