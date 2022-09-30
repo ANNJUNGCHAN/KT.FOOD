@@ -1,6 +1,6 @@
 ### 아직 작업중입니다.
 """
-!git clone https://github.com/ANNJUNGCHAN/KT.FOOD.git <
+!git clone https://github.com/ANNJUNGCHAN/KT.FOOD.git <br>
 !gdown https://drive.google.com/uc?id=1kEs2H7SiFGDn_7cxezP3QlSiC0loJ-q3
 """
 - 모델을 이용해 새로운 이미지를 예측하고 싶다면, 위의 코드를 실행하시오.
