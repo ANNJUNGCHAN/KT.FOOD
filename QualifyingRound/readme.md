@@ -1,4 +1,11 @@
 # 예선모델
+![슬라이드1](https://user-images.githubusercontent.com/89781598/193318478-ab62900a-1511-41e4-bc25-91acb6896a8e.JPG)
+
+### 개요
+![슬라이드2](https://user-images.githubusercontent.com/89781598/193318547-f69aa137-2fce-484f-8915-3e179ba53972.JPG)
+
+### 파일 경로
+
 
 ### 새로운 이미지 예측하기!
 #### 들어가기
