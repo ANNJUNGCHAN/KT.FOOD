@@ -38,7 +38,7 @@ def predict(model,flow_dataset,load_checkpoint_folder) :
         y_col='target',
         batch_size=256,
         seed=7,
-        shuffle=True,
+        shuffle=False,
         class_mode='categorical',
         target_size=(224,224),
         )
